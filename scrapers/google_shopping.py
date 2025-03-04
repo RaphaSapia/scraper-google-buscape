@@ -89,7 +89,7 @@ def process_google_shopping_results(driver, product, banned_term, min_price, max
             except:
                 description = '--'
 
-            url_element = link.find_element(By.CLASS_NAME, 'mnIHsc')  # Elemento pai do elemento URL
+            url_element = link.find_element(By.CLASS_NAME, 'mnIHsc')  
             url = url_element.find_element(By.XPATH, './*').get_attribute('href')
 
             # Extract and process the price
